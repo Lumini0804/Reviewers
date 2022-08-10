@@ -45,13 +45,16 @@
        
       </ul>
     </div><!-- az-header-menu -->
+
     <div class="az-header-right">
-      <a href="https://www.bootstrapdash.com/demo/azia-free/docs/documentation.html" target="_blank" class="az-header-search-link"><i class="far fa-file-alt"></i></a>
-      <a href="" class="az-header-search-link"><i class="fas fa-search"></i></a>
-      <div class="az-header-message">
-        <a href="#"><i class="typcn typcn-messages"></i></a>
-      </div><!-- az-header-message -->
+      
+     
+      
+        <a href="#" class="az-header-search-link"><i class="fas fa-search"></i></a>
       <div class="dropdown az-header-notification">
+
+
+      
         <a href="" class="new"><i class="typcn typcn-bell"></i></a>
         <div class="dropdown-menu">
           <div class="az-dropdown-header mg-b-20 d-sm-none">
@@ -107,8 +110,6 @@
           </div><!-- az-header-profile -->
 
           <a href="" class="dropdown-item"><i class="typcn typcn-user-outline"></i> My Profile</a>
-          <a href="" class="dropdown-item"><i class="typcn typcn-edit"></i> Edit Profile</a>
-          <a href="" class="dropdown-item"><i class="typcn typcn-time"></i> Activity Logs</a>
           <a href="" class="dropdown-item"><i class="typcn typcn-cog-outline"></i> Account Settings</a>
           <a href="logout" class="dropdown-item"><i class="typcn typcn-power-outline"></i> Sign Out</a>
         </div><!-- dropdown-menu -->

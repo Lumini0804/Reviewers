@@ -17,12 +17,7 @@
                 </div><!-- media-body -->
               </div><!-- media -->
               
-              <div class="media">
-                <div class="media-body">
-                  <label>Event Category</label>
-                  <h6>All Categories</h6>
-                </div><!-- media-body -->
-              </div><!-- media -->
+
               <a href="" class="btn btn-purple">Check</a>
             </div>
           </div><!-- az-dashboard-one-title -->

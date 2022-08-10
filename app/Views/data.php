@@ -2,9 +2,7 @@
             
 
             <nav class="nav">
-              <a class="nav-link" href="#"><i class="far fa-save"></i> Save Report</a>
-              <a class="nav-link" href="#"><i class="far fa-file-pdf"></i> Export to PDF</a>
-              <a class="nav-link" href="#"><i class="far fa-envelope"></i>Send to Email</a>
+              <a class="nav-link" href="#"><i class="far fa-save"></i> Save Reviews</a>
               <a class="nav-link" href="#"><i class="fas fa-ellipsis-h"></i></a>
             </nav>
           </div>
@@ -14,11 +12,7 @@
               <div class="card card-dashboard-one">
                 <div class="card-header">
                   
-                  <div class="btn-group">
-                    <button class="btn active">Day</button>
-                    <button class="btn">Week</button>
-                    <button class="btn">Month</button>
-                  </div>
+                <p style="text-align:center">Positive and Negative Variation of reviews in the last year</p>
                 </div><!-- card-header -->
                 <div class="card-body">
 
@@ -30,7 +24,7 @@
                   <div class="flot-chart-wrapper">
                     <div id="flotChart" class="flot-chart"></div>
                   </div>
-                  <div><h3>Positive and Negative Variation of reviews in the last year</div>
+                 <br><br><br><br><br><br>
                   
                 
 
@@ -67,6 +61,7 @@
                 </div><!-- card-body -->
               </div><!-- card -->
             </div><!-- col -->
+            
             <div class="col-lg-4 mg-t-20 mg-lg-t-0">
               <div class="row row-sm">
                 <div class="col-sm-6">
