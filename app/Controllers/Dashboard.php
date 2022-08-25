@@ -10,15 +10,24 @@ use Serpapi\GoogleSearchResultsPhp;
 
 class Dashboard extends BaseController
 {
+    function __construct()
+    {
+
+        //$this->session = \Config\Services::session();
+        //$this->session->start();
+        helper(['url', 'form']);
+        $this->session = session();
+        $this->userName = $this->session->get('name');
+        
+        
+        $this->user_id = $this->session->get('user_id');
+    }
+    
     public function index()
     {
-        $session = session();
-        $userName = $session->get('name');
         
-        $data['userName'] = $userName;
-        $user_id = $session->get('user_id');
         $model = new BusinessModel();
-            $business = $model->where('user_id', $user_id)->first();
+            $business = $model->where('user_id', $this->user_id)->first();
 
         if(empty($business)){
             $profile = 0;
@@ -31,10 +40,18 @@ class Dashboard extends BaseController
 
         $data['profile'] = $profile;
         $data['business'] = $business;
-
+        $data['userName'] = $this->userName;
         return view('dashboard', $data);
     
     }
+
+    public function myprofile()
+    {
+      $data['userName'] = $this->userName;
+      return view('myprofile' , $data);
+    }
+
+
 
     public function save_business()
     {

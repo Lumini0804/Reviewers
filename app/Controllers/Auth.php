@@ -107,6 +107,52 @@ class Auth extends BaseController
 
 
 
+
+    
+
+    public function editmyprofile()
+    {
+
+      $validation =  \Config\Services::validation();
+      $rules=[
+        'name'=>'required',
+        'email'=>'required|valid_email|is_unique[users.email]',
+        'mobile'=>'required|max_length[10]',
+        'password'=>'required|min_length[5]',
+        'confirm_password'=>'required|min_length[5]|matches[password]'
+      ];
+
+      
+      helper(['form']);
+
+      if($this->validate($rules)){
+        $model = new UserModel();
+            $newUser = [                    
+                'name' => $this->request->getVar('name'), 
+                'email' => $this->request->getVar('email'),
+                'mobile' => $this->request->getVar('mobile'),
+                'password' => md5($this->request->getVar('password'))
+            ];
+            $model->save( $newUser );
+            $user = $model->where('email', $newUser['email'])->first();
+            $this->session->set($user);
+            
+            return redirect()->to('/dashboard');
+      }else{
+        return view('register', ['validation'=> $validation]);
+
+        
+      }
+
+    }
+
+
+
+
+
+    
+
+
     public function logout()
     {
       $this->session->remove('user_id');

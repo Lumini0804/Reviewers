@@ -44,6 +44,9 @@ $routes->get('/dashboard', 'Dashboard::index');
 $routes->post('/dashboard/save-business', 'Dashboard::save_business');
 $routes->get('/logout', 'Auth::logout');
 $routes->post('/dashboard/send-reply', 'Dashboard::send_reply');
+$routes->get('/dashboard/myprofile', 'Dashboard::myprofile');
+$routes->post('/myprofile', 'Auth::editmyprofile');
+
 
 /*
  * --------------------------------------------------------------------
