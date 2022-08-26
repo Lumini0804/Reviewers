@@ -73,11 +73,14 @@
             </div><!-- row -->
           </form>
         </div><!-- az-signup-header -->
+
         <div class="az-signup-footer">
           <p>Already have an account? <a href="<?= base_url('login');?>">Sign In</a></p>
         </div><!-- az-signin-footer -->
+
       </div><!-- az-card-signin -->
     </div><!-- az-signin-wrapper -->
+</div>
 
 
     <script src="<?= base_url('public/lib/jquery/jquery.min.js');?>"></script>

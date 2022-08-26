@@ -46,7 +46,8 @@ $routes->get('/logout', 'Auth::logout');
 $routes->post('/dashboard/send-reply', 'Dashboard::send_reply');
 $routes->get('/dashboard/myprofile', 'Dashboard::myprofile');
 $routes->post('/myprofile', 'Auth::editmyprofile');
-
+$routes->get('/dashboard/accountsettings', 'Dashboard::accountsettings');
+$routes->post('/accountsettings', 'Auth::editaccountsettings');
 
 /*
  * --------------------------------------------------------------------

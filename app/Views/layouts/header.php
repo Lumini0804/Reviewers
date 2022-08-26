@@ -110,7 +110,7 @@
           </div><!-- az-header-profile -->
 
           <a href="<?= base_url('/dashboard/myprofile');?>" class="dropdown-item"><i class="typcn typcn-user-outline"></i> My Profile</a>
-          <a href="" class="dropdown-item"><i class="typcn typcn-cog-outline"></i> Account Settings</a>
+          <a href="<?= base_url('/dashboard/accountsettings');?>" class="dropdown-item"><i class="typcn typcn-cog-outline"></i> Account Settings</a>
           <a href="logout" class="dropdown-item"><i class="typcn typcn-power-outline"></i> Sign Out</a>
         </div><!-- dropdown-menu -->
       </div>

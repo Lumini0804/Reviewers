@@ -2,7 +2,9 @@
 
 <div class="az-content az-content-dashboard">
       <div class="container">
-        <div class="az-content-body">
+         <div class="az-content-body">
+
+
       
     <div class="az-column-signup">
       <h1 class="az-logo">reviewers</h1>
@@ -45,10 +47,17 @@
             
             <button class="btn btn-az-primary btn-block">Submit Details</button>
           </form>
-        </div><!-- az-signup-header -->
+        </div>
+
         <div class="az-signup-footer">
-      </div><!-- az-card-signin -->
-    </div><!-- az-signin-wrapper -->
+      </div>
+      
+    </div>
+
+
+
 </div>
 </div>
+</div>
+
     <?php require("layouts/footer.php");?>
