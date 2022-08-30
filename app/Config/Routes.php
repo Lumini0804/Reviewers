@@ -48,6 +48,8 @@ $routes->get('/dashboard/myprofile', 'Dashboard::myprofile');
 $routes->post('/myprofile', 'Auth::editmyprofile');
 $routes->get('/dashboard/accountsettings', 'Dashboard::accountsettings');
 $routes->post('/accountsettings', 'Auth::editaccountsettings');
+$routes->get('/', 'Auth::forgotpassword');
+$routes->post('/forgotpassword', 'Auth::addforgotpassword');
 
 /*
  * --------------------------------------------------------------------
