@@ -32,19 +32,20 @@
         <div class="az-signup-header">
           <h4>Reset Your Password</h4>
 
-          <form action="<?= base_url('register');?>" method="post">
+          <form action="<?= base_url('forgotpassword');?>" method="post">
             
             <div class="form-group">
-              <label>Enter your email and we'll send you an OTP, how to reset your password.</label>
+              <label>Enter your email and we'll send you an email, how to reset your password.</label>
               <input type="text" class="form-control" placeholder="Enter your email" value="<?= set_value('email'); ?>" name="email" >
               <span class="text-danger"><?= isset($validation) ? display_error($validation, 'email') : '' ?></span>
             </div>
 
         
             
-            <button class="btn btn-az-primary btn-block">Send OTP</button>
+            <button class="btn btn-az-primary btn-block">Send</button>
+            
 
-            <p><a href="">Go back to home page<a href="<?= base_url('dashboard');?>"></a></p>
+            <p><a href="<?= base_url();?>">Go back to home page</a></p>
             
           </form>
         </div>

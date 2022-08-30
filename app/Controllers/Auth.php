@@ -165,17 +165,11 @@ class Auth extends BaseController
     }
 
 
-    public function addforgotpassword()
+    public function processforgotpassword()
     {
-
+      
 
     }
-
-
-
-
-
-
 
 
 }

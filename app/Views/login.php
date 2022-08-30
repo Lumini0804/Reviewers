@@ -72,8 +72,8 @@
 
         </div><!-- az-signin-header -->
         <div class="az-signin-footer">
-          <p><a href="">Forgot password?<a href="<?= base_url('forgotpassword');?>"></a></p>
-          <p><a href="">Don't have an account? <a href="<?= base_url('register');?>">Create an Account</a></p>
+          <p><a href="<?= base_url('forgotpassword');?>">Forgot password?</a></p>
+          <p>Don't have an account? <a href="<?= base_url('register');?>">Create an Account</a></p>
         </div><!-- az-signin-footer -->
       </div>
     </div><!-- az-signup-wrapper -->
