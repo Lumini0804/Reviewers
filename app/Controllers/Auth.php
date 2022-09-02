@@ -40,6 +40,11 @@ class Auth extends BaseController
       return view('forgotpassword');
     }
 
+    public function sendemail()
+    {
+      return view('sendemail');
+    }
+
 
     public function save()
     {
@@ -166,6 +171,12 @@ class Auth extends BaseController
 
 
     public function processforgotpassword()
+    {
+      
+
+    }
+
+    public function processsendemail()
     {
       
 

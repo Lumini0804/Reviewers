@@ -50,6 +50,8 @@ $routes->get('/dashboard/accountsettings', 'Dashboard::accountsettings');
 $routes->post('/accountsettings', 'Auth::editaccountsettings');
 $routes->get('/forgotpassword', 'Auth::forgotpassword');
 $routes->post('/forgotpassword', 'Auth::processforgotpassword');
+$routes->get('/sendemail', 'Auth::sendemail');
+$routes->post('/sendemail', 'Auth::processsendemail');
 
 /*
  * --------------------------------------------------------------------
