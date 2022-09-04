@@ -35,6 +35,16 @@ class Auth extends BaseController
       return view('login');
     }
 
+    public function forgotpassword()
+    {
+      return view('forgotpassword');
+    }
+
+    public function sendemail()
+    {
+      return view('sendemail');
+    }
+
 
     public function save()
     {
@@ -158,6 +168,20 @@ class Auth extends BaseController
       $this->session->remove('user_id');
       return redirect()->to('/login');
     }
+
+
+    public function processforgotpassword()
+    {
+      
+
+    }
+
+    public function processsendemail()
+    {
+      
+
+    }
+
 
 }
 
