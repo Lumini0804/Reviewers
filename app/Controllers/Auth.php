@@ -43,7 +43,7 @@ class Auth extends BaseController
       $rules=[
         'name'=>'required',
         'email'=>'required|valid_email|is_unique[users.email]',
-        'mobile'=>'required|max_length[10]',
+        'mobile'=>'required|min_length[10]',
         'password'=>'required|min_length[5]',
         'confirm_password'=>'required|min_length[5]|matches[password]'
       ];

@@ -15,7 +15,8 @@
         "laminas/laminas-escaper": "^2.9",
         "monkeylearn/monkeylearn-php": "^3.3",
         "psr/log": "^1.1",
-        "serpapi/google-search-results-php": "^1.2"
+        "serpapi/google-search-results-php": "^1.2",
+        "twilio/sdk": "^6.41"
     },
     "require-dev": {
         "codeigniter/coding-standard": "^1.1",

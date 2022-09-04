@@ -15,7 +15,7 @@ class ReviewModel extends Model
     // protected $returnType     = 'array';
     // protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['business_id','review_text','review_rating','review_date','review_status','author_name','reply'];
+    protected $allowedFields = ['business_id','review_text','review_rating','review_date','review_status','author_name','reply','sentiment'];
 
     // protected $useTimestamps = false;
     // protected $createdField  = 'created_at';

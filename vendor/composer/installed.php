@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'codeigniter4/codeigniter4',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => 'cac088d362053ce53cd3ac41cbb107991085d157',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -20,9 +20,9 @@
             'dev_requirement' => true,
         ),
         'codeigniter4/codeigniter4' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => 'cac088d362053ce53cd3ac41cbb107991085d157',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -693,6 +693,15 @@
             'install_path' => __DIR__ . '/../theseer/tokenizer',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'twilio/sdk' => array(
+            'pretty_version' => '6.41.0',
+            'version' => '6.41.0.0',
+            'reference' => '3e6b81216052aac086efd6334a0fc358c38c2e20',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../twilio/sdk',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'webmozart/assert' => array(
             'pretty_version' => '1.11.0',

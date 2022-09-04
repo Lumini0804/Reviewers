@@ -15,7 +15,7 @@ class BusinessModel extends Model
     // protected $returnType     = 'array';
     // protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['user_id', 'provider', 'business_id', 'created_at'];
+    protected $allowedFields = ['user_id', 'provider', 'business_id', 'data_id', 'created_at'];
 
     // protected $useTimestamps = false;
     // protected $createdField  = 'created_at';

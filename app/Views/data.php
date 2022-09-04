@@ -1,11 +1,9 @@
 <div class="az-dashboard-nav"> 
-            
-
-            <nav class="nav">
-              <a class="nav-link" href="#"><i class="far fa-save"></i> Save Reviews</a>
-              <a class="nav-link" href="#"><i class="fas fa-ellipsis-h"></i></a>
-            </nav>
-          </div>
+  <nav class="nav">
+    <a class="nav-link" href="#"><i class="far fa-save"></i> Save Reviews</a>
+    <a class="nav-link" href="#"><i class="fas fa-ellipsis-h"></i></a>
+  </nav>
+</div>
 
           <div class="row row-sm mg-b-20">
             <div class="col-lg-8 ht-lg-100p">
@@ -15,11 +13,7 @@
                 <p style="text-align:center">Positive and Negative Variation of reviews in the last year</p>
                 </div><!-- card-header -->
                 <div class="card-body">
-
-
-
                   <div class="card-body-top">
-                    
                   </div>
                   <div class="flot-chart-wrapper">
                     <div id="flotChart" class="flot-chart"></div>
@@ -37,18 +31,20 @@
                           <th>Author</th>
                           <th>Review</th>
                           <th>Ratings</th>
+                          <th>Sentiment</th>
                           <th></th>
                         </tr>
                       </thead>
                       <tbody>
                         <?php 
                         foreach($reviews as $review){
-                            ?>
+                        ?>
                         <tr>
                           <th scope="row">2022/07/11</th>
                           <td><?php echo $review['author_name'];?></td>
                           <td><?php echo $review['review_text'];?></td>
                           <td><?php echo $review['review_rating'];?></td>
+                          <td><?php echo $review['sentiment'];?></td>
                           <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Reply</button></td>
                         </tr>
                         <?php } ?>

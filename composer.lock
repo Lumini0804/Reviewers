@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7fb181671d2d32fae5ea761d881f96c5",
+    "content-hash": "8436768da8a1d2ca8d4b5b46fbbfcc64",
     "packages": [
         {
             "name": "facebook/graph-sdk",
@@ -351,6 +351,55 @@
                 "source": "https://github.com/serpapi/google-search-results-php/tree/1.2.0"
             },
             "time": "2019-03-31T04:12:00+00:00"
+        },
+        {
+            "name": "twilio/sdk",
+            "version": "6.41.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:twilio/twilio-php.git",
+                "reference": "3e6b81216052aac086efd6334a0fc358c38c2e20"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twilio/twilio-php/zipball/3e6b81216052aac086efd6334a0fc358c38c2e20",
+                "reference": "3e6b81216052aac086efd6334a0fc358c38c2e20",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "require-dev": {
+                "guzzlehttp/guzzle": "^6.3 || ^7.0",
+                "phpunit/phpunit": ">=7.0"
+            },
+            "suggest": {
+                "guzzlehttp/guzzle": "An HTTP client to execute the API requests"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Twilio\\": "src/Twilio/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Twilio API Team",
+                    "email": "api@twilio.com"
+                }
+            ],
+            "description": "A PHP wrapper for Twilio's API",
+            "homepage": "https://github.com/twilio/twilio-php",
+            "keywords": [
+                "api",
+                "sms",
+                "twilio"
+            ],
+            "time": "2022-08-24T20:39:42+00:00"
         }
     ],
     "packages-dev": [
