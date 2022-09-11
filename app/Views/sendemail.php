@@ -30,7 +30,7 @@
     <div class="az-column-signup">
       <h1 class="az-logo">reviewers</h1>
         <div class="az-signup-header">
-          <h4>User Details</h4>
+          <h4>Please add new password and confirm it</h4>
 
           <form action="<?= base_url('forgotpassword');?>" method="post">
             

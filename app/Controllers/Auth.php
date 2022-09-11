@@ -58,7 +58,6 @@ class Auth extends BaseController
         'confirm_password'=>'required|min_length[5]|matches[password]'
       ];
 
-      
       helper(['form']);
 
       if($this->validate($rules)){
@@ -74,11 +73,8 @@ class Auth extends BaseController
             $this->session->set($user);
             return redirect()->to('/dashboard');
       }else{
-        return view('register', ['validation'=> $validation]);
-
-        
+        return view('register', ['validation'=> $validation]);  
       }
-
     }
 
 

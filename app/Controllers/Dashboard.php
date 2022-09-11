@@ -43,12 +43,18 @@ class Dashboard extends BaseController
     
     }
 
+
     public function myprofile()
     {
       $data['userName'] = $this->userName;
       return view('myprofile' , $data);
     }
 
+    public function accountsettings()
+    {
+      $data['userName'] = $this->userName;
+      return view('accountsettings' , $data);
+    }
 
 
     public function save_business()
