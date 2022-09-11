@@ -30,7 +30,13 @@
     <div class="az-column-signup">
       <h1 class="az-logo">reviewers</h1>
         <div class="az-signup-header">
-          <h4>Reset Your Password</h4>
+          <h4><?php 
+          if(session()->getFlashdata('message') !== NULL ){
+            echo session()->getFlashdata('message');
+          }else{
+            echo "Reset Your Password";
+          }
+          ?></h4>
 
           <form action="<?= base_url('forgotpassword');?>" method="post">
             

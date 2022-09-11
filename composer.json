@@ -13,6 +13,7 @@
         "facebook/graph-sdk": "^5.1",
         "kint-php/kint": "^4.1.1",
         "laminas/laminas-escaper": "^2.9",
+        "mailchimp/transactional": "^1.0",
         "monkeylearn/monkeylearn-php": "^3.3",
         "psr/log": "^1.1",
         "serpapi/google-search-results-php": "^1.2",
