@@ -16,6 +16,7 @@
         "mailchimp/transactional": "^1.0",
         "monkeylearn/monkeylearn-php": "^3.3",
         "psr/log": "^1.1",
+        "sendgrid/sendgrid": "^8.0",
         "serpapi/google-search-results-php": "^1.2",
         "twilio/sdk": "^6.41"
     },

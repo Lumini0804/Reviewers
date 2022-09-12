@@ -3,7 +3,8 @@
 namespace App\Controllers;
 
 use App\Models\UserModel;
-
+use Twilio\Rest\Client;
+use SendGrid\Mail\Mail;
 
 class Auth extends BaseController
 {
@@ -34,7 +35,6 @@ class Auth extends BaseController
   {
     return view('sendemail');
   }
-
 
   public function save()
   {
@@ -135,13 +135,18 @@ class Auth extends BaseController
         $model->where('email', $uemail)->set(['password_reset' => $code])->update();
         $link = base_url()."/reset-password/".$code;
         $msg = "Please click the link below to reset your password.\n\n".$link;
-        $email = \Config\Services::email();
-        $email->setFrom('revieweral123@gmail.com', 'Reviewers');
-        $email->setTo($uemail);
-        $email->setSubject('Reset Password');
-        $email->setMessage($msg);
-        $email->send();
-        $email->printDebugger(['headers']);
+        $email = new \SendGrid\Mail\Mail(); 
+        $email->setFrom(getEnv('SG_FROM'), "Reviewers Admin");
+        $email->setSubject("Reset Reviewers Password");
+        $email->addTo($uemail);
+        $email->addContent("text/plain", $msg);
+        $email->addContent("text/html", $msg);
+        $sendgrid = new \SendGrid(getEnv('SG_KEY'));
+        try {
+          $response = $sendgrid->send($email);
+        } catch (Exception $e) {
+          echo 'Caught exception: '. $e->getMessage() ."\n";
+        }
         $this->session->setFlashdata('message', 'Password reset email sent to '.$uemail);
         return view('forgotpassword', ['validation'=> $validation]);
       }else{
@@ -156,6 +161,26 @@ class Auth extends BaseController
   public function processsendemail()
   {
       
+  }
+
+  public function checkreviews(){
+    $pn = '+94704170948';
+    $msg = 'Your business received a new Positive review';
+    $this->sendsms($pn, $msg);
+  }
+
+  private function sendsms($pn, $msg){
+    $account_sid = getEnv('TW_SID');
+    $auth_token = getEnv('TW_SECRET');
+    $twilio_number = getEnv('TW_PHONE');
+    $client = new \Twilio\Rest\Client($account_sid, $auth_token);
+    $client->messages->create(
+        $pn,
+        array(
+            'from' => $twilio_number,
+            'body' => $msg
+        )
+    );
   }
 
   private function generateResetCode(
