@@ -36,44 +36,71 @@
       $(function(){
         'use strict'
 
-    		var plot = $.plot('#flotChart', [{
-          data: flotSampleData3,
-          color: '#007bff',
-          lines: {
-            fillColor: { colors: [{ opacity: 0 }, { opacity: 0.2 }]}
-          }
-        },{
-          data: flotSampleData4,
-          color: '#560bd0',
-          lines: {
-            fillColor: { colors: [{ opacity: 0 }, { opacity: 0.2 }]}
-          }
-        }], {
-    			series: {
-    				shadowSize: 0,
-            lines: {
-              show: true,
-              lineWidth: 2,
-              fill: true
+        var dataX = [[0,'Jan'],[1,'Feb'],[2,'Mar'],[3,'Apr'],[4,'May'],[5,'Jun'],[6,'Jul'],[7,'Aug'],[8,'Sep'],[9,'Oct'],[10,'Nov'],[11,'Dec']];
+        loadMonthlyGraph(dataX);
+        function loadMonthlyGraph(dataX) {
+            var dataset = [{
+                label: "Positive",
+                data: [[0,15],[1,13],[2,23],[3,28],[4,38],[5,22],[6,31],[7,33]],
+                color: "#1ab394",
+                yaxis: 2,
+                bars: {
+                    show: true,
+                    align: "center",
+                    barWidth: 0.8,
+                    lineWidth: 0
+                },
+                stack: true
+              },
+                {
+                label: 'Negative', 
+                data: [[0,8], [1,10], [2,12], [3,15], [4,11], [5,9],[6,7],[7,5]],
+                bars: {
+                    show: true,
+                    align: "center",
+                    barWidth: 0.8,
+                    lineWidth: 0
+                },
+                stack: true
             }
-    			},
-          grid: {
-            borderWidth: 0,
-            labelMargin: 8
-          },
-    			yaxis: {
-            show: true,
-    				min: 0,
-    				max: 100,
-            ticks: [[0,''],[20,'20K'],[40,'40K'],[60,'60K'],[80,'80K']],
-            tickColor: '#eee'
-    			},
-    			xaxis: {
-            show: true,
-            color: '#fff',
-            ticks: [[25,'OCT 21'],[75,'OCT 22'],[100,'OCT 23'],[125,'OCT 24']],
-          }
-        });
+            ];
+            var options = {
+                xaxis: {
+                  tickSize: 1,
+                    tickLength: 0,
+                    axisLabelUseCanvas: true,
+                    axisLabel: "Time",
+                    axisLabelFontSizePixels: 12,
+                    axisLabelFontFamily: 'Arial',
+                    axisLabelPadding: 10,
+                    color: "#d5d5d5",
+                    ticks: dataX
+                },
+                yaxes: [{
+                    position: "right",
+                    clolor: "#1ab394ssz",
+                    axisLabel: "Reviews",
+                    axisLabelUseCanvas: true,
+                    axisLabelFontSizePixels: 12,
+                    axisLabelFontFamily: ' Arial',
+                    axisLabelPadding: 10
+                }],
+                legend: {
+                    noColumns: 1,
+                    labelBoxBorderColor: "#000000",
+                    position: "ne"
+                },
+                grid: {
+                    hoverable: true,
+                    borderWidth: 0
+                },
+                series : {
+                    stack: true
+                }
+            };
+            $.plot($("#flotChart"), dataset, options);
+            $("#flotChart").UseTooltip();
+        }
 
         $.plot('#flotChart1', [{
           data: dashData2,
