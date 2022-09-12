@@ -53,6 +53,7 @@ $routes->get('/forgotpassword', 'Auth::forgotpassword');
 $routes->post('/forgotpassword', 'Auth::processforgotpassword');
 $routes->get('/sendemail', 'Auth::sendemail');
 $routes->post('/sendemail', 'Auth::processsendemail');
+$routes->get('/checkreviews', 'Auth::checkreviews');
 
 /*
  * --------------------------------------------------------------------
